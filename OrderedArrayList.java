@@ -12,6 +12,12 @@ public class OrderedArrayList {
         return _list.toString();
     }
 
+    //get element at index
+    //returns element at index of ArrayList
+    public Integer get(int index){
+        return _list.get(index);
+    }
+
     //add element to OrderedArrayList
     //Iterates through array. If inserted value < than any value already in array, 
     //move everything to the right and place value at index. Otherwise, place value at end.
