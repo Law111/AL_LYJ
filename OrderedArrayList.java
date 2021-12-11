@@ -7,7 +7,7 @@ public class OrderedArrayList {
         _list = new ArrayList<Integer>();
     }
 
-    //Same toString as ArrayList
+    //call ArrayList toString()
     public String toString(){
         return _list.toString();
     }
