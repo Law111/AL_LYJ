@@ -1,6 +1,7 @@
 # <p align="center"> LYJ: Lawrence Joa, Yat Long Chan, Joshua Gao </p>
+
 ## ALTester
-Iterates through an ArrayList, if any of its elements are larger than the element after it, the ArrayList is not sorted and will return false. Otherwise, return true
+Iterates through an ArrayList, if any of its elements are larger than the element after it, the ArrayList is not sorted and will return false. If the iteration finishes without returning false, this means the ArrayList is sorted and the method will return true.
 
 ## OrderedArrayList
 
