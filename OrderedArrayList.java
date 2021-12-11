@@ -19,8 +19,12 @@ public class OrderedArrayList {
     }
 
     //add element to OrderedArrayList
-    //Iterates through array. If inserted value < than any value already in array, 
-    //move everything to the right and place value at index. Otherwise, place value at end.
+    /**
+    Iterates through array. If new value is less than any value already in array, 
+    move everything from original value to the right and place new value at index. 
+    Otherwise, place value at end.
+    **/
+
     public boolean add(Integer newVal){
         for (int i = 0; i < _list.size(); i ++){
             if (newVal.compareTo(_list.get(i)) < 0){
@@ -33,11 +37,9 @@ public class OrderedArrayList {
     }
 
     // Remove element from OrderedArrayList
-    // Calls remove method from ArrayList class as it already maintains invariant.
+    // Calls remove method from ArrayList class as it already maintains invariance.
     public Integer remove(int index){
-        Integer temp = _list.get(index);
-        _list.remove(index);
-        return temp;
+        return _list.remove(index);
     }
 
     // Size of OrderedArrayList
@@ -50,11 +52,17 @@ public class OrderedArrayList {
         OrderedArrayList mark = new OrderedArrayList();
         System.out.println("Printing empty OrderedArrayList mark...");
         System.out.println(mark);
-        //populate OrderedArrayList backwards to test if invariance is held.
-        for (int i = 23; i > 0; i --){
-            mark.add(i);
+        //populate OrderedArrayList with random ints to test if invariance is held.
+        for (int i = 0; i < 10; i ++){
+            mark.add((int) (Math.random() * 10));
         }
         System.out.println("Printing populated OrderedArrayList mark...");
         System.out.println(mark);
+
+        System.out.println("Printing removed element...");
+        System.out.println(mark.remove(8));
+        System.out.println("Printing OrderedArrayList mark after removal...");
+        System.out.println(mark);
+
     }
 }
