@@ -6,7 +6,7 @@ Iterates through an ArrayList, if any of its elements are larger than the elemen
 ## OrderedArrayList
 
 * **Integer get(int index)**\
-Returns element at specified index by calling get() method from ArrayList class/
+Returns element at specified index by calling get() method from ArrayList class.
 
 * **boolean add(Integer newVal)**\
 Uses linear search. If new value is less than any value already in array, move everything from original value to the right and place new value at index. Otherwise, place new value at end.
