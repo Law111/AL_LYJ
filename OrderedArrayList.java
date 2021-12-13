@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+//Creates ArrayList with Integer type and referenced by _list
 public class OrderedArrayList {
     private ArrayList<Integer> _list;
 
@@ -8,6 +9,8 @@ public class OrderedArrayList {
     }
 
     //call ArrayList toString()
+    //actually prints out array & not bunch of hashcodes
+
     public String toString(){
         return _list.toString();
     }
@@ -19,6 +22,7 @@ public class OrderedArrayList {
     }
 
     //add element to OrderedArrayList using linear search
+    //iterating through each individual element and using compareTo to check 
     public boolean addLinear(Integer newVal){
         for (int i = 0; i < _list.size(); i ++){
             if (newVal.compareTo(_list.get(i)) < 0){
@@ -31,6 +35,7 @@ public class OrderedArrayList {
     }
 
     //add element to OrderedArrayList using binary search
+    //Binary search work by checking value against the median value which is constantly updated by taking average of high and low index
     public boolean addBinary(Integer newVal){
         int low = 0;
         int med = 0;
