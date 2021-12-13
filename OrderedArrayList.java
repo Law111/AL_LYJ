@@ -18,12 +18,7 @@ public class OrderedArrayList {
         return _list.get(index);
     }
 
-    //add element to OrderedArrayList
-    /**
-    Uses Linear Search. If new value is less than any value already in array, 
-    move everything from original value to the right and place new value at index. 
-    Otherwise, place value at end.
-    **/
+    //add element to OrderedArrayList using linear search
     public boolean addLinear(Integer newVal){
         for (int i = 0; i < _list.size(); i ++){
             if (newVal.compareTo(_list.get(i)) < 0){
@@ -35,13 +30,7 @@ public class OrderedArrayList {
         return true;
     }
 
-    //add element to OrderedArrayList
-    /**
-    Uses Binary Search. If newVal is the same as the value at the median index, place it there.
-    Otherwise, if newVal is < median value, move search area to only lower quadrant. 
-    If newVal is greater, move search area to only upper quadrant. Repeat until median value == newVal or low > high.
-    adds newVal to index low after loop finishes as at this point low == size of list
-    **/
+    //add element to OrderedArrayList using binary search
     public boolean addBinary(Integer newVal){
         int low = 0;
         int med = 0;
