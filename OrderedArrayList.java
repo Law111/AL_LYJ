@@ -87,10 +87,11 @@ public class OrderedArrayList {
         System.out.println(mark);
 
         mark = new OrderedArrayList();
-        //Test linear search population.
+        //Test binary search population.
         for (int i = 0; i < 10; i ++){
             mark.addBinary((int) (Math.random() * 10));
         }        
-
+        System.out.println("Printing populated OrderedArrayList mark...");
+        System.out.println(mark);
     }
 }
