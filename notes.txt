@@ -2,10 +2,7 @@ LYJ: Lawrence Joa, Yat Long Chan, Joshua Gao
 
 DISCO
 
-ArrayList <Integers> specify an array with a data-type of integers. 
-We use return in toString to output the an array and not a bunch of hash codes.
 Linear search is much easier to code than binary search since linear research searches each element in the array one-by-one (hence linearly). 
-We only need to use an if-statement to check if the element is greater/less than the specified element and simply add the new value into the array.
 However, because linear search requires each element to be checked, it consumes a lot more memory and time than binary searching.
 Binary search greatly reduced the total cases by continuously halfing the # of cases. This is done through casework: greater than, lesser than, or equal to the median. 
 Invariance allows the removal of an element by calling the method _list.remove(index) without disrupting the index of the rest of the array. 
